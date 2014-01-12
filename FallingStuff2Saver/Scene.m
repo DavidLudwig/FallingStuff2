@@ -21,10 +21,6 @@
 #define LOG(...)
 #endif
 
-@interface FallingStuffScene()
-@property (strong) NSDictionary * config;
-@end
-
 float RandFloat(float rangeBegin, float rangeEnd)
 {
 	const float min = MIN(rangeBegin, rangeEnd);
@@ -60,6 +56,11 @@ static CGRect CGRectCentered(CGFloat cx, CGFloat cy, CGFloat width, CGFloat heig
 }
 
 
+@interface FallingStuffScene()
+@property (strong) NSDictionary * config;
+@property (weak) NSTimer * flashFixTimer;
+@end
+
 @implementation FallingStuffScene
 
 - (id)initWithSize:(CGSize)size {
@@ -85,13 +86,33 @@ static CGRect CGRectCentered(CGFloat cx, CGFloat cy, CGFloat width, CGFloat heig
 		
 		self.backgroundColor = C_OBJ("background-color");
 
-		[self refresh];
+		// HACK: work-around a possible bug in OSX whereby the screensaver will
+		// refresh twice on the screensaver's first display.
+		NSTimer * timer = [NSTimer timerWithTimeInterval:0.5 target:self selector:@selector(refresh) userInfo:nil repeats:NO];
+		self.flashFixTimer = timer;
+		[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
     }
     return self;
 }
 
+- (void)dealloc
+{
+	[self stopFlashFixTimer];
+}
+
+- (void)stopFlashFixTimer
+{
+	if (self.flashFixTimer) {
+		if ([self.flashFixTimer isValid]) {
+			[self.flashFixTimer invalidate];
+		}
+		self.flashFixTimer = nil;
+	}
+}
+
 - (void)refresh
 {
+	[self stopFlashFixTimer];
 	[self removeAllChildren];
 	[self populatePegs];
 }
