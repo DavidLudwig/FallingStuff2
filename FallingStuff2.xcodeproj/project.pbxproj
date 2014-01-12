@@ -20,6 +20,7 @@
 		7523F7DC187BA38E0063096D /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7523F7DB187BA38E0063096D /* ScreenSaver.framework */; };
 		7523F7E2187BA38E0063096D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7523F7E0187BA38E0063096D /* InfoPlist.strings */; };
 		7523F7E6187BA38E0063096D /* SaverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7523F7E5187BA38E0063096D /* SaverView.m */; };
+		7586C1B8188244F3009A7F40 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7586C1B7188244F3009A7F40 /* Carbon.framework */; };
 		75F8D7B5187BA439001BD63A /* Init.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F8D7B4187BA439001BD63A /* Init.m */; };
 		75F8D7D1187BAC84001BD63A /* FallingStuff2Saver.saver in Install Screen Saver to ~/Library/Screen Savers */ = {isa = PBXBuildFile; fileRef = 7523F7D9187BA38E0063096D /* FallingStuff2Saver.saver */; };
 		75F8D7D3187BAEF2001BD63A /* FallingStuff2Lib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75F8D7AC187BA438001BD63A /* FallingStuff2Lib.dylib */; };
@@ -100,6 +101,7 @@
 		7523F7E4187BA38E0063096D /* SaverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaverView.h; sourceTree = "<group>"; };
 		7523F7E5187BA38E0063096D /* SaverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaverView.m; sourceTree = "<group>"; };
 		7523F7EF187BA3A60063096D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		7586C1B7188244F3009A7F40 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		75F8D7AC187BA438001BD63A /* FallingStuff2Lib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = FallingStuff2Lib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F8D7AF187BA439001BD63A /* FallingStuff2Lib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FallingStuff2Lib-Prefix.pch"; sourceTree = "<group>"; };
 		75F8D7B0187BA439001BD63A /* FallingStuff2LibProj.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = FallingStuff2LibProj.xcconfig; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7586C1B8188244F3009A7F40 /* Carbon.framework in Frameworks */,
 				75F8D7DC187BB51D001BD63A /* SpriteKit.framework in Frameworks */,
 				75F8D7D5187BB1A8001BD63A /* Foundation.framework in Frameworks */,
 				75F8D7D4187BB1A2001BD63A /* AppKit.framework in Frameworks */,
@@ -179,6 +182,7 @@
 		7523F76D187BA2FC0063096D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7586C1B7188244F3009A7F40 /* Carbon.framework */,
 				75F8D7D6187BB1B0001BD63A /* SceneKit.framework */,
 				7523F76E187BA2FC0063096D /* Cocoa.framework */,
 				7523F770187BA2FC0063096D /* SpriteKit.framework */,
@@ -744,6 +748,7 @@
 				75F8D7B8187BA439001BD63A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
