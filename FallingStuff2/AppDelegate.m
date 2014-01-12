@@ -15,13 +15,15 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+	CGRect saverSize = self.view.frame;
+	saverSize.origin = CGPointMake(0.0, 0.0);
 
 	void * sharedLibrary = NULL;
 	NSView * view = NULL;
 	if (SaverLib_Load([NSBundle mainBundle],
 					  @"FallingStuff2Lib.dylib",
 					  &sharedLibrary,
-					  CGRectMake(0.0, 0.0, 1024.0, 768.0),
+					  saverSize,
 					  &view))
 	{
 		self.sharedLibraryHandle = sharedLibrary;
