@@ -21,24 +21,16 @@ typedef id (*ScreenSaverFactory)(NSRect frame);
     self = [super initWithFrame:frame isPreview:isPreview];
     if (self) {
         [self setAnimationTimeInterval:1/60.0];
-		
-		void * sharedLibrary = NULL;
-		NSView * view = NULL;
-		if (SaverLib_Load([NSBundle bundleForClass:[self class]],
-						  @"FallingStuff2Lib.dylib",
-						  &sharedLibrary,
-						  CGRectMake(0.0, 0.0, frame.size.width, frame.size.height),
-						  &view))
-		{
-			self.sharedLibraryHandle = sharedLibrary;
-			[self addSubview:view];
-			self.mainView = view;
-		}
     }
     return self;
 }
 
 - (void)dealloc
+{
+	[self unloadSharedLibrary];
+}
+
+- (void)unloadSharedLibrary
 {
 	if (self.sharedLibraryHandle) {
 		dlclose(self.sharedLibraryHandle);
@@ -49,10 +41,27 @@ typedef id (*ScreenSaverFactory)(NSRect frame);
 - (void)startAnimation
 {
     [super startAnimation];
+
+	void * sharedLibrary = NULL;
+	NSView * view = NULL;
+	if (SaverLib_Load([NSBundle bundleForClass:[self class]],
+					  @"FallingStuff2Lib.dylib",
+					  &sharedLibrary,
+					  CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height),
+					  &view))
+	{
+		self.sharedLibraryHandle = sharedLibrary;
+		[self addSubview:view];
+		self.mainView = view;
+	}
 }
 
 - (void)stopAnimation
 {
+	[self.mainView removeFromSuperview];
+	self.mainView = nil;
+	[self unloadSharedLibrary];
+
     [super stopAnimation];
 }
 
