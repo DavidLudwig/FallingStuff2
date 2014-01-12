@@ -17,7 +17,7 @@ NSView * CreateScreenSaver(NSRect frame)
     SKScene * scene = [FallingStuffScene sceneWithSize:frame.size];
 //    scene.scaleMode = SKSceneScaleModeAspectFit;
     [skView presentScene:scene];
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
+//    skView.showsFPS = YES;
+//    skView.showsNodeCount = YES;
 	return skView;
 }
