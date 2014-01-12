@@ -28,6 +28,7 @@
 	{
 		self.sharedLibraryHandle = sharedLibrary;
 		[self.view addSubview:view];
+		[self.window makeFirstResponder:view];
 	}
 }
 
