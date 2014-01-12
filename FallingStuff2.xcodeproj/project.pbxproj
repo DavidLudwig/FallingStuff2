@@ -23,7 +23,7 @@
 		7586C1B8188244F3009A7F40 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7586C1B7188244F3009A7F40 /* Carbon.framework */; };
 		75F8D7B5187BA439001BD63A /* Init.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F8D7B4187BA439001BD63A /* Init.m */; };
 		75F8D7D1187BAC84001BD63A /* FallingStuff2Saver.saver in Install Screen Saver to ~/Library/Screen Savers */ = {isa = PBXBuildFile; fileRef = 7523F7D9187BA38E0063096D /* FallingStuff2Saver.saver */; };
-		75F8D7D3187BAEF2001BD63A /* FallingStuff2Lib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75F8D7AC187BA438001BD63A /* FallingStuff2Lib.dylib */; };
+		75F8D7D3187BAEF2001BD63A /* FallingStuff2Lib.dylib in Copy Screensaver Library to Bundle */ = {isa = PBXBuildFile; fileRef = 75F8D7AC187BA438001BD63A /* FallingStuff2Lib.dylib */; };
 		75F8D7D4187BB1A2001BD63A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7523F773187BA2FC0063096D /* AppKit.framework */; };
 		75F8D7D5187BB1A8001BD63A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7523F775187BA2FC0063096D /* Foundation.framework */; };
 		75F8D7DA187BB418001BD63A /* Scene.h in Headers */ = {isa = PBXBuildFile; fileRef = 75F8D7D8187BB418001BD63A /* Scene.h */; };
@@ -54,14 +54,15 @@
 			name = "Install Screen Saver to ~/Library/Screen Savers";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		75F8D7D2187BAEDD001BD63A /* CopyFiles */ = {
+		75F8D7D2187BAEDD001BD63A /* Copy Screensaver Library to Bundle */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstSubfolderSpec = 11;
 			files = (
-				75F8D7D3187BAEF2001BD63A /* FallingStuff2Lib.dylib in CopyFiles */,
+				75F8D7D3187BAEF2001BD63A /* FallingStuff2Lib.dylib in Copy Screensaver Library to Bundle */,
 			);
+			name = "Copy Screensaver Library to Bundle";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		75F8D7DD187BB824001BD63A /* CopyFiles */ = {
@@ -345,7 +346,7 @@
 				7523F7D5187BA38E0063096D /* Headers */,
 				7523F7D6187BA38E0063096D /* Resources */,
 				7523F7D7187BA38E0063096D /* Rez */,
-				75F8D7D2187BAEDD001BD63A /* CopyFiles */,
+				75F8D7D2187BAEDD001BD63A /* Copy Screensaver Library to Bundle */,
 				75F8D7B9187BA6F9001BD63A /* Install Screen Saver to ~/Library/Screen Savers */,
 			);
 			buildRules = (
