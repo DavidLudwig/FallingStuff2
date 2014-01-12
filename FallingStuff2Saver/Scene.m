@@ -114,6 +114,8 @@ static CGRect CGRectCentered(CGFloat cx, CGFloat cy, CGFloat width, CGFloat heig
 		peg.fillColor = [(SKColor *)RandArrayElement(C_OBJ("peg-background-colors")) colorWithAlphaComponent:C_FLOAT("peg-background-alpha")];
 		peg.strokeColor = [SKColor whiteColor];
 		peg.glowWidth = 0.0;
+		peg.lineWidth = 1.0;
+		peg.antialiased = NO;
 		[self addChild:peg];
 	}
 }
