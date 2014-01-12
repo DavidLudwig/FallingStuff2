@@ -27,7 +27,7 @@ typedef id (*ScreenSaverFactory)(NSRect frame);
 		if (SaverLib_Load([NSBundle bundleForClass:[self class]],
 						  @"FallingStuff2Lib.dylib",
 						  &sharedLibrary,
-						  frame,
+						  CGRectMake(0.0, 0.0, frame.size.width, frame.size.height),
 						  &view))
 		{
 			self.sharedLibraryHandle = sharedLibrary;
