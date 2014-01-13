@@ -84,6 +84,8 @@ static CGRect CGRectCentered(CGFloat cx, CGFloat cy, CGFloat width, CGFloat heig
 			@"peg-background-alpha": @0.5,
 		};
 		
+		srand((unsigned int)time(NULL));
+		
 		self.backgroundColor = C_OBJ("background-color");
 
 		// HACK: work-around a possible bug in OSX whereby the screensaver will
