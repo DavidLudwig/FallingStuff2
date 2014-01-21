@@ -33,6 +33,9 @@ int RandInt(int rangeBegin, int rangeEnd)
 {
 	const int min = MIN(rangeBegin, rangeEnd);
 	const int max = MAX(rangeBegin, rangeEnd);
+	if (min == max) {
+		return min;
+	}
 	return min + (rand() % (max - min));
 }
 
