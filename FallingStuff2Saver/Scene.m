@@ -78,6 +78,10 @@ static const uint32_t ballCategory		= 0x1 << 2;
     if (self = [super initWithSize:size]) {
         self.config = @{
 			@"background-color": [SKColor blackColor],
+			@"ball-background-alpha": @0.5,
+			@"ball-background-colors": @[
+				[SKColor colorWithCalibratedRed:0.827 green:0.741 blue:0.549 alpha:1.0],	// "#d3bd8c" --> 211, 189, 140 --> 0.827, 0.741, 0.549
+			],
 			@"ball-count-max": @100,
 			@"ball-dimension-begin": @20,
 			@"ball-dimension-end": @35,
@@ -205,8 +209,8 @@ static const uint32_t ballCategory		= 0x1 << 2;
 	SKShapeNode * ball = [[SKShapeNode alloc] init];
 	ball.path = CGPathCreateWithEllipseInRect(rect, NULL);
 	ball.position = CGPointMake(cx - (rect.size.width / 2.0), cy - (rect.size.height / 2.0));
-	ball.fillColor = [SKColor brownColor];
-	ball.strokeColor = [SKColor whiteColor];
+	ball.fillColor = [(SKColor *)RandArrayElement(C_OBJ("ball-background-colors")) colorWithAlphaComponent:C_FLOAT("ball-background-alpha")];
+	ball.strokeColor = [ball.fillColor colorWithAlphaComponent:1.0];
 	ball.glowWidth = 0.0;
 	ball.lineWidth = 1.0;
 	ball.antialiased = NO;
