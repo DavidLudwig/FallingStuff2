@@ -91,6 +91,7 @@ static const uint32_t ballCategory		= 0x1 << 2;
 			@"peg-count-end": @15,
 			@"peg-dimension-scale-begin": @0.1,
 			@"peg-dimension-scale-end": @0.35,
+			@"peg-background-alpha": @0.5,
 			@"peg-background-colors": @[
 				[SKColor redColor],		// red
 				[SKColor redColor],		// red
@@ -101,7 +102,6 @@ static const uint32_t ballCategory		= 0x1 << 2;
 				[SKColor yellowColor],	// yellow
 				[SKColor colorWithCalibratedRed:0 green:1 blue:1 alpha:1],	// turquoise
 			],
-			@"peg-background-alpha": @0.5,
 			@"scene-post-completion-refresh-delay": @15.0,
 		};
 		
