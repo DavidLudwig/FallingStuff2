@@ -77,6 +77,8 @@ static const uint32_t ballCategory		= 0x1 << 2;
     if (self = [super initWithSize:size]) {
         self.config = @{
 			@"background-color": [SKColor blackColor],
+			@"ball-dimension-begin": @20,
+			@"ball-dimension-end": @35,
 			@"peg-count-begin": @9,
 			@"peg-count-end": @15,
 			@"peg-dimension-scale-begin": @0.1,
@@ -173,12 +175,14 @@ static const uint32_t ballCategory		= 0x1 << 2;
 
 - (void)addBall
 {
-	CGFloat dimension = 40.0;
+	CGFloat cx = RandFloat(0.0, self.size.width);
+	CGFloat cy = self.frame.size.height * 1.5;
+	CGFloat dimension = RandFloat(C_RANGE_FLOAT("ball-dimension"));
 	CGRect rect = CGRectCentered(0.0, 0.0, dimension, dimension);
 
 	SKShapeNode * ball = [[SKShapeNode alloc] init];
 	ball.path = CGPathCreateWithEllipseInRect(rect, NULL);
-	ball.position = CGPointMake(200.0, self.frame.size.height * 1.5);
+	ball.position = CGPointMake(cx - (rect.size.width / 2.0), cy - (rect.size.height / 2.0));
 	ball.fillColor = [SKColor brownColor];
 	ball.strokeColor = [SKColor whiteColor];
 	ball.glowWidth = 0.0;
