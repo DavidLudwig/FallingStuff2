@@ -69,6 +69,7 @@ static const uint32_t ballCategory		= 0x1 << 2;
 @interface FallingStuffScene()
 @property (strong) NSDictionary * config;
 @property (weak) NSTimer * flashFixTimer;
+@property (assign) int ballCount;
 @end
 
 @implementation FallingStuffScene
@@ -77,8 +78,11 @@ static const uint32_t ballCategory		= 0x1 << 2;
     if (self = [super initWithSize:size]) {
         self.config = @{
 			@"background-color": [SKColor blackColor],
+			@"ball-count-max": @100,
 			@"ball-dimension-begin": @20,
 			@"ball-dimension-end": @35,
+			@"ball-spawn-delay-begin": @0.1,
+			@"ball-spawn-delay-end": @0.5,
 			@"peg-count-begin": @9,
 			@"peg-count-end": @15,
 			@"peg-dimension-scale-begin": @0.1,
@@ -94,6 +98,7 @@ static const uint32_t ballCategory		= 0x1 << 2;
 				[SKColor colorWithCalibratedRed:0 green:1 blue:1 alpha:1],	// turquoise
 			],
 			@"peg-background-alpha": @0.5,
+			@"scene-post-completion-refresh-delay": @15.0,
 		};
 		
 		srand((unsigned int)time(NULL));
@@ -130,11 +135,28 @@ static const uint32_t ballCategory		= 0x1 << 2;
 	[self stopFlashFixTimer];
 	[self removeAllChildren];
 	self.physicsWorld.gravity = CGVectorMake(0.0, -1.0);
+	self.ballCount = 0;
 	
 	// Set-up new things:
 	[self addWalls];
 	[self addPegs];
-	[self addBall];
+	
+	// Tick once:
+	[self tick];
+}
+
+- (void)tick
+{
+	if (self.ballCount < C_INT("ball-count-max")) {
+		[self addBall];
+		if (self.ballCount < C_INT("ball-count-max")) {
+			const NSTimeInterval delay = RandFloat(C_RANGE_FLOAT("ball-spawn-delay"));
+			[self performSelector:@selector(tick) withObject:self afterDelay:delay];
+			return;
+		}
+	}
+	
+	[self performSelector:@selector(refresh) withObject:self afterDelay:C_FLOAT("scene-post-completion-refresh-delay")];
 }
 
 - (void)addWalls
@@ -193,6 +215,8 @@ static const uint32_t ballCategory		= 0x1 << 2;
 	ball.physicsBody.categoryBitMask = ballCategory;
 	ball.physicsBody.collisionBitMask = ballCategory | pegCategory | wallCategory;
 	[self addChild:ball];
+	
+	self.ballCount += 1;
 }
 
 - (void)keyDown:(NSEvent *)theEvent
