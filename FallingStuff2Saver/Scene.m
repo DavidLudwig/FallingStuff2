@@ -59,6 +59,13 @@ static CGRect CGRectCentered(CGFloat cx, CGFloat cy, CGFloat width, CGFloat heig
 }
 
 
+
+// Physics Body Categories
+static const uint32_t wallCategory		= 0x1 << 0;
+static const uint32_t pegCategory		= 0x1 << 1;
+static const uint32_t ballCategory		= 0x1 << 2;
+
+
 @interface FallingStuffScene()
 @property (strong) NSDictionary * config;
 @property (weak) NSTimer * flashFixTimer;
@@ -117,12 +124,26 @@ static CGRect CGRectCentered(CGFloat cx, CGFloat cy, CGFloat width, CGFloat heig
 
 - (void)refresh
 {
+	// Clean-up previous things and reset the physics world:
 	[self stopFlashFixTimer];
 	[self removeAllChildren];
-	[self populatePegs];
+	self.physicsWorld.gravity = CGVectorMake(0.0, -1.0);
+	
+	// Set-up new things:
+	[self addWalls];
+	[self addPegs];
+	[self addBall];
 }
 
-- (void)populatePegs
+- (void)addWalls
+{
+	CGRect frame = self.frame;
+	frame.size.height *= 2.0;	// balls spawn above the visible screen... extend the walls appropriately
+	self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:frame];
+	self.physicsBody.categoryBitMask = wallCategory;
+}
+
+- (void)addPegs
 {
 	const CGFloat scaleBase = MIN(self.size.width, self.size.height);
 
@@ -132,18 +153,42 @@ static CGRect CGRectCentered(CGFloat cx, CGFloat cy, CGFloat width, CGFloat heig
 		CGFloat cx = RandFloat(0.0, self.size.width);
 		CGFloat cy = RandFloat(0.0, self.size.height);
 		CGFloat dimension = scaleBase * RandFloat(C_RANGE_FLOAT("peg-dimension-scale"));
-		CGRect rect = CGRectCentered(cx, cy, dimension, dimension);
+		CGRect rect = CGRectCentered(0.0, 0.0, dimension, dimension);
 
 		// Create a peg:
 		SKShapeNode * peg = [[SKShapeNode alloc] init];
 		peg.path = CGPathCreateWithEllipseInRect(rect, NULL);
+		peg.position = CGPointMake(cx - (rect.size.width / 2.0), cy - (rect.size.height / 2.0));
 		peg.fillColor = [(SKColor *)RandArrayElement(C_OBJ("peg-background-colors")) colorWithAlphaComponent:C_FLOAT("peg-background-alpha")];
 		peg.strokeColor = [peg.fillColor colorWithAlphaComponent:1.0];
 		peg.glowWidth = 0.0;
 		peg.lineWidth = 1.0;
 		peg.antialiased = NO;
+		peg.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:(dimension / 2.0)];
+		peg.physicsBody.dynamic = NO;
+		peg.physicsBody.categoryBitMask = pegCategory;
 		[self addChild:peg];
 	}
+}
+
+- (void)addBall
+{
+	CGFloat dimension = 40.0;
+	CGRect rect = CGRectCentered(0.0, 0.0, dimension, dimension);
+
+	SKShapeNode * ball = [[SKShapeNode alloc] init];
+	ball.path = CGPathCreateWithEllipseInRect(rect, NULL);
+	ball.position = CGPointMake(200.0, self.frame.size.height * 1.5);
+	ball.fillColor = [SKColor brownColor];
+	ball.strokeColor = [SKColor whiteColor];
+	ball.glowWidth = 0.0;
+	ball.lineWidth = 1.0;
+	ball.antialiased = NO;
+	ball.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:(dimension / 2.0)];
+	ball.physicsBody.dynamic = YES;
+	ball.physicsBody.categoryBitMask = ballCategory;
+	ball.physicsBody.collisionBitMask = ballCategory | pegCategory | wallCategory;
+	[self addChild:ball];
 }
 
 - (void)keyDown:(NSEvent *)theEvent
