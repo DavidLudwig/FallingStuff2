@@ -21,14 +21,14 @@
 		7523F7E2187BA38E0063096D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7523F7E0187BA38E0063096D /* InfoPlist.strings */; };
 		7523F7E6187BA38E0063096D /* SaverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7523F7E5187BA38E0063096D /* SaverView.m */; };
 		755B3F561896044800B59D45 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CD3D5F18960411005910CD /* libBox2D.a */; };
+		755B3F5D189605E700B59D45 /* Scene.h in Headers */ = {isa = PBXBuildFile; fileRef = 755B3F5B189605E700B59D45 /* Scene.h */; };
+		755B3F5E189605E700B59D45 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 755B3F5C189605E700B59D45 /* Scene.m */; };
 		7586C1B8188244F3009A7F40 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7586C1B7188244F3009A7F40 /* Carbon.framework */; };
 		75F8D7B5187BA439001BD63A /* Init.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F8D7B4187BA439001BD63A /* Init.m */; };
 		75F8D7D1187BAC84001BD63A /* FallingStuff2Saver.saver in Install Screen Saver to ~/Library/Screen Savers */ = {isa = PBXBuildFile; fileRef = 7523F7D9187BA38E0063096D /* FallingStuff2Saver.saver */; };
 		75F8D7D3187BAEF2001BD63A /* FallingStuff2Lib.dylib in Copy Screensaver Library to Bundle */ = {isa = PBXBuildFile; fileRef = 75F8D7AC187BA438001BD63A /* FallingStuff2Lib.dylib */; };
 		75F8D7D4187BB1A2001BD63A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7523F773187BA2FC0063096D /* AppKit.framework */; };
 		75F8D7D5187BB1A8001BD63A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7523F775187BA2FC0063096D /* Foundation.framework */; };
-		75F8D7DA187BB418001BD63A /* Scene.h in Headers */ = {isa = PBXBuildFile; fileRef = 75F8D7D8187BB418001BD63A /* Scene.h */; };
-		75F8D7DB187BB418001BD63A /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F8D7D9187BB418001BD63A /* Scene.m */; };
 		75F8D7DC187BB51D001BD63A /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7523F770187BA2FC0063096D /* SpriteKit.framework */; };
 		75F8D7DE187BB82F001BD63A /* FallingStuff2Saver.saver in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7523F7D9187BA38E0063096D /* FallingStuff2Saver.saver */; };
 /* End PBXBuildFile section */
@@ -131,6 +131,8 @@
 		7523F7E4187BA38E0063096D /* SaverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaverView.h; sourceTree = "<group>"; };
 		7523F7E5187BA38E0063096D /* SaverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaverView.m; sourceTree = "<group>"; };
 		7523F7EF187BA3A60063096D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		755B3F5B189605E700B59D45 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		755B3F5C189605E700B59D45 /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
 		7586C1B7188244F3009A7F40 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		75CD3D5718960411005910CD /* Box2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Box2D.xcodeproj; path = Box2D/Box2D/Build/xcode5/Box2D.xcodeproj; sourceTree = "<group>"; };
 		75F8D7AC187BA438001BD63A /* FallingStuff2Lib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = FallingStuff2Lib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,8 +142,6 @@
 		75F8D7B2187BA439001BD63A /* Init.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Init.h; sourceTree = "<group>"; };
 		75F8D7B4187BA439001BD63A /* Init.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Init.m; sourceTree = "<group>"; };
 		75F8D7D6187BB1B0001BD63A /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
-		75F8D7D8187BB418001BD63A /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scene.h; path = ../FallingStuff2Saver/Scene.h; sourceTree = "<group>"; };
-		75F8D7D9187BB418001BD63A /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Scene.m; path = ../FallingStuff2Saver/Scene.m; sourceTree = "<group>"; };
 		75F8D7E1187BB955001BD63A /* LibLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LibLoader.h; path = Common/LibLoader.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -299,8 +299,8 @@
 				75F8D7B1187BA439001BD63A /* FallingStuff2LibTarget.xcconfig */,
 				75F8D7B2187BA439001BD63A /* Init.h */,
 				75F8D7B4187BA439001BD63A /* Init.m */,
-				75F8D7D8187BB418001BD63A /* Scene.h */,
-				75F8D7D9187BB418001BD63A /* Scene.m */,
+				755B3F5B189605E700B59D45 /* Scene.h */,
+				755B3F5C189605E700B59D45 /* Scene.m */,
 				75F8D7AE187BA439001BD63A /* Supporting Files */,
 			);
 			path = FallingStuff2Lib;
@@ -337,7 +337,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75F8D7DA187BB418001BD63A /* Scene.h in Headers */,
+				755B3F5D189605E700B59D45 /* Scene.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,8 +556,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755B3F5E189605E700B59D45 /* Scene.m in Sources */,
 				75F8D7B5187BA439001BD63A /* Init.m in Sources */,
-				75F8D7DB187BB418001BD63A /* Scene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
