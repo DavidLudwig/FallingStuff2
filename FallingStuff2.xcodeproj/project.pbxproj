@@ -20,6 +20,7 @@
 		7523F7DC187BA38E0063096D /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7523F7DB187BA38E0063096D /* ScreenSaver.framework */; };
 		7523F7E2187BA38E0063096D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7523F7E0187BA38E0063096D /* InfoPlist.strings */; };
 		7523F7E6187BA38E0063096D /* SaverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7523F7E5187BA38E0063096D /* SaverView.m */; };
+		755B3F561896044800B59D45 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CD3D5F18960411005910CD /* libBox2D.a */; };
 		7586C1B8188244F3009A7F40 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7586C1B7188244F3009A7F40 /* Carbon.framework */; };
 		75F8D7B5187BA439001BD63A /* Init.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F8D7B4187BA439001BD63A /* Init.m */; };
 		75F8D7D1187BAC84001BD63A /* FallingStuff2Saver.saver in Install Screen Saver to ~/Library/Screen Savers */ = {isa = PBXBuildFile; fileRef = 7523F7D9187BA38E0063096D /* FallingStuff2Saver.saver */; };
@@ -39,6 +40,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7523F76A187BA2FC0063096D;
 			remoteInfo = FallingStuff2;
+		};
+		75CD3D5E18960411005910CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75CD3D5718960411005910CD /* Box2D.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 80FF01D2141C3D980059E59D;
+			remoteInfo = Box2D;
+		};
+		75CD3D6018960411005910CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75CD3D5718960411005910CD /* Box2D.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 80BB8901141C3E1800F1753A;
+			remoteInfo = GLUI;
+		};
+		75CD3D6218960411005910CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75CD3D5718960411005910CD /* Box2D.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 80BB890A141C3E2700F1753A;
+			remoteInfo = HelloWorld;
+		};
+		75CD3D6418960411005910CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75CD3D5718960411005910CD /* Box2D.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 80BB8918141C3E3600F1753A;
+			remoteInfo = Testbed;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -103,6 +132,7 @@
 		7523F7E5187BA38E0063096D /* SaverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaverView.m; sourceTree = "<group>"; };
 		7523F7EF187BA3A60063096D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		7586C1B7188244F3009A7F40 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		75CD3D5718960411005910CD /* Box2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Box2D.xcodeproj; path = Box2D/Box2D/Build/xcode5/Box2D.xcodeproj; sourceTree = "<group>"; };
 		75F8D7AC187BA438001BD63A /* FallingStuff2Lib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = FallingStuff2Lib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F8D7AF187BA439001BD63A /* FallingStuff2Lib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FallingStuff2Lib-Prefix.pch"; sourceTree = "<group>"; };
 		75F8D7B0187BA439001BD63A /* FallingStuff2LibProj.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = FallingStuff2LibProj.xcconfig; sourceTree = "<group>"; };
@@ -147,6 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755B3F561896044800B59D45 /* libBox2D.a in Frameworks */,
 				7586C1B8188244F3009A7F40 /* Carbon.framework in Frameworks */,
 				75F8D7DC187BB51D001BD63A /* SpriteKit.framework in Frameworks */,
 				75F8D7D5187BB1A8001BD63A /* Foundation.framework in Frameworks */,
@@ -160,6 +191,7 @@
 		7523F762187BA2FC0063096D = {
 			isa = PBXGroup;
 			children = (
+				75CD3D5718960411005910CD /* Box2D.xcodeproj */,
 				7523F776187BA2FC0063096D /* FallingStuff2App */,
 				7523F7DD187BA38E0063096D /* FallingStuff2Saver */,
 				75F8D7AD187BA439001BD63A /* FallingStuff2Lib */,
@@ -247,6 +279,17 @@
 				7523F7E3187BA38E0063096D /* FallingStuff2Saver-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		75CD3D5818960411005910CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75CD3D5F18960411005910CD /* libBox2D.a */,
+				75CD3D6118960411005910CD /* libGLUI.a */,
+				75CD3D6318960411005910CD /* HelloWorld */,
+				75CD3D6518960411005910CD /* Testbed */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		75F8D7AD187BA439001BD63A /* FallingStuff2Lib */ = {
@@ -399,6 +442,12 @@
 			mainGroup = 7523F762187BA2FC0063096D;
 			productRefGroup = 7523F76C187BA2FC0063096D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 75CD3D5818960411005910CD /* Products */;
+					ProjectRef = 75CD3D5718960411005910CD /* Box2D.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7523F76A187BA2FC0063096D /* FallingStuff2App */,
@@ -408,6 +457,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		75CD3D5F18960411005910CD /* libBox2D.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBox2D.a;
+			remoteRef = 75CD3D5E18960411005910CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		75CD3D6118960411005910CD /* libGLUI.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGLUI.a;
+			remoteRef = 75CD3D6018960411005910CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		75CD3D6318960411005910CD /* HelloWorld */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = HelloWorld;
+			remoteRef = 75CD3D6218960411005910CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		75CD3D6518960411005910CD /* Testbed */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = Testbed;
+			remoteRef = 75CD3D6418960411005910CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7523F769187BA2FC0063096D /* Resources */ = {
@@ -692,6 +772,11 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					Box2D/Box2D,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -699,6 +784,11 @@
 		75F8D7B8187BA439001BD63A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					Box2D/Box2D,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
