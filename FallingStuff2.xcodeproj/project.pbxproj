@@ -203,9 +203,9 @@
 			isa = PBXGroup;
 			children = (
 				7502D79C18A7E071002B3A1D /* Dependencies */,
-				7523F776187BA2FC0063096D /* FallingStuff2App */,
-				7523F7DD187BA38E0063096D /* FallingStuff2Saver */,
-				75F8D7AD187BA439001BD63A /* FallingStuff2Lib */,
+				7523F776187BA2FC0063096D /* App */,
+				7523F7DD187BA38E0063096D /* Screensaver */,
+				75F8D7AD187BA439001BD63A /* Lib */,
 				75F8D7E2187BC42F001BD63A /* Common Source */,
 				7523F76D187BA2FC0063096D /* Frameworks */,
 				7523F76C187BA2FC0063096D /* Products */,
@@ -248,7 +248,7 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		7523F776187BA2FC0063096D /* FallingStuff2App */ = {
+		7523F776187BA2FC0063096D /* App */ = {
 			isa = PBXGroup;
 			children = (
 				7523F782187BA2FC0063096D /* MainMenu.xib */,
@@ -256,8 +256,7 @@
 				7523F789187BA2FC0063096D /* AppDelegate.h */,
 				7523F777187BA2FC0063096D /* Supporting Files */,
 			);
-			name = FallingStuff2App;
-			path = FallingStuff2;
+			path = App;
 			sourceTree = "<group>";
 		};
 		7523F777187BA2FC0063096D /* Supporting Files */ = {
@@ -272,14 +271,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		7523F7DD187BA38E0063096D /* FallingStuff2Saver */ = {
+		7523F7DD187BA38E0063096D /* Screensaver */ = {
 			isa = PBXGroup;
 			children = (
 				7523F7E4187BA38E0063096D /* SaverView.h */,
 				7523F7E5187BA38E0063096D /* SaverView.m */,
 				7523F7DE187BA38E0063096D /* Supporting Files */,
 			);
-			path = FallingStuff2Saver;
+			path = Screensaver;
 			sourceTree = "<group>";
 		};
 		7523F7DE187BA38E0063096D /* Supporting Files */ = {
@@ -292,7 +291,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		75F8D7AD187BA439001BD63A /* FallingStuff2Lib */ = {
+		75F8D7AD187BA439001BD63A /* Lib */ = {
 			isa = PBXGroup;
 			children = (
 				75F8D7B0187BA439001BD63A /* FallingStuff2LibProj.xcconfig */,
@@ -303,7 +302,7 @@
 				755B3F5C189605E700B59D45 /* Scene.m */,
 				75F8D7AE187BA439001BD63A /* Supporting Files */,
 			);
-			path = FallingStuff2Lib;
+			path = Lib;
 			sourceTree = "<group>";
 		};
 		75F8D7AE187BA439001BD63A /* Supporting Files */ = {
@@ -666,8 +665,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FallingStuff2/FallingStuff2-Prefix.pch";
-				INFOPLIST_FILE = "FallingStuff2/FallingStuff2-Info.plist";
+				GCC_PREFIX_HEADER = "App/FallingStuff2-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/App/FallingStuff2-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
@@ -680,8 +679,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FallingStuff2/FallingStuff2-Prefix.pch";
-				INFOPLIST_FILE = "FallingStuff2/FallingStuff2-Info.plist";
+				GCC_PREFIX_HEADER = "App/FallingStuff2-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/App/FallingStuff2-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
@@ -733,12 +732,12 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FallingStuff2Saver/FallingStuff2Saver-Prefix.pch";
+				GCC_PREFIX_HEADER = "Screensaver/FallingStuff2Saver-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "FallingStuff2Saver/FallingStuff2Saver-Info.plist";
+				INFOPLIST_FILE = "Screensaver/FallingStuff2Saver-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				PRODUCT_NAME = FallingStuff2Saver;
 				WRAPPER_EXTENSION = saver;
@@ -750,8 +749,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FallingStuff2Saver/FallingStuff2Saver-Prefix.pch";
-				INFOPLIST_FILE = "FallingStuff2Saver/FallingStuff2Saver-Info.plist";
+				GCC_PREFIX_HEADER = "Screensaver/FallingStuff2Saver-Prefix.pch";
+				INFOPLIST_FILE = "Screensaver/FallingStuff2Saver-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				PRODUCT_NAME = FallingStuff2Saver;
 				WRAPPER_EXTENSION = saver;
