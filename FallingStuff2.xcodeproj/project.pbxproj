@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7502D79D18A7E08C002B3A1D /* libChipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7502D79918A7E06C002B3A1D /* libChipmunk.a */; };
 		7523F76F187BA2FC0063096D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7523F76E187BA2FC0063096D /* Cocoa.framework */; };
 		7523F771187BA2FC0063096D /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7523F770187BA2FC0063096D /* SpriteKit.framework */; };
 		7523F77B187BA2FC0063096D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7523F779187BA2FC0063096D /* InfoPlist.strings */; };
@@ -20,7 +21,6 @@
 		7523F7DC187BA38E0063096D /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7523F7DB187BA38E0063096D /* ScreenSaver.framework */; };
 		7523F7E2187BA38E0063096D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7523F7E0187BA38E0063096D /* InfoPlist.strings */; };
 		7523F7E6187BA38E0063096D /* SaverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7523F7E5187BA38E0063096D /* SaverView.m */; };
-		755B3F561896044800B59D45 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CD3D5F18960411005910CD /* libBox2D.a */; };
 		755B3F5D189605E700B59D45 /* Scene.h in Headers */ = {isa = PBXBuildFile; fileRef = 755B3F5B189605E700B59D45 /* Scene.h */; };
 		755B3F5E189605E700B59D45 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 755B3F5C189605E700B59D45 /* Scene.m */; };
 		7586C1B8188244F3009A7F40 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7586C1B7188244F3009A7F40 /* Carbon.framework */; };
@@ -34,40 +34,33 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7502D79618A7E06C002B3A1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7502D79018A7E06B002B3A1D /* Chipmunk6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D3E5F0490AA32FDE004E361B;
+			remoteInfo = ChipmunkDemo;
+		};
+		7502D79818A7E06C002B3A1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7502D79018A7E06B002B3A1D /* Chipmunk6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D34963BB0B56CAA300CAD239;
+			remoteInfo = ChipmunkStatic;
+		};
+		7502D79A18A7E06C002B3A1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7502D79018A7E06B002B3A1D /* Chipmunk6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D3C3787A11063B1B003EF1D9;
+			remoteInfo = "ChipmunkStatic-iPhone";
+		};
 		7523F796187BA2FC0063096D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7523F763187BA2FC0063096D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7523F76A187BA2FC0063096D;
 			remoteInfo = FallingStuff2;
-		};
-		75CD3D5E18960411005910CD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 75CD3D5718960411005910CD /* Box2D.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 80FF01D2141C3D980059E59D;
-			remoteInfo = Box2D;
-		};
-		75CD3D6018960411005910CD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 75CD3D5718960411005910CD /* Box2D.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 80BB8901141C3E1800F1753A;
-			remoteInfo = GLUI;
-		};
-		75CD3D6218960411005910CD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 75CD3D5718960411005910CD /* Box2D.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 80BB890A141C3E2700F1753A;
-			remoteInfo = HelloWorld;
-		};
-		75CD3D6418960411005910CD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 75CD3D5718960411005910CD /* Box2D.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 80BB8918141C3E3600F1753A;
-			remoteInfo = Testbed;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -107,6 +100,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7502D79018A7E06B002B3A1D /* Chipmunk6.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Chipmunk6.xcodeproj; path = Dependencies/Chipmunk/xcode/Chipmunk6.xcodeproj; sourceTree = "<group>"; };
 		7523F76B187BA2FC0063096D /* FallingStuff2App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallingStuff2App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7523F76E187BA2FC0063096D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		7523F770187BA2FC0063096D /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
@@ -134,7 +128,6 @@
 		755B3F5B189605E700B59D45 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		755B3F5C189605E700B59D45 /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
 		7586C1B7188244F3009A7F40 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
-		75CD3D5718960411005910CD /* Box2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Box2D.xcodeproj; path = Box2D/Box2D/Build/xcode5/Box2D.xcodeproj; sourceTree = "<group>"; };
 		75F8D7AC187BA438001BD63A /* FallingStuff2Lib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = FallingStuff2Lib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F8D7AF187BA439001BD63A /* FallingStuff2Lib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FallingStuff2Lib-Prefix.pch"; sourceTree = "<group>"; };
 		75F8D7B0187BA439001BD63A /* FallingStuff2LibProj.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = FallingStuff2LibProj.xcconfig; sourceTree = "<group>"; };
@@ -177,7 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				755B3F561896044800B59D45 /* libBox2D.a in Frameworks */,
+				7502D79D18A7E08C002B3A1D /* libChipmunk.a in Frameworks */,
 				7586C1B8188244F3009A7F40 /* Carbon.framework in Frameworks */,
 				75F8D7DC187BB51D001BD63A /* SpriteKit.framework in Frameworks */,
 				75F8D7D5187BB1A8001BD63A /* Foundation.framework in Frameworks */,
@@ -188,10 +181,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7502D79118A7E06B002B3A1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7502D79718A7E06C002B3A1D /* ChipmunkDemo.app */,
+				7502D79918A7E06C002B3A1D /* libChipmunk.a */,
+				7502D79B18A7E06C002B3A1D /* libChipmunk-iPhone.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7502D79C18A7E071002B3A1D /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				7502D79018A7E06B002B3A1D /* Chipmunk6.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
 		7523F762187BA2FC0063096D = {
 			isa = PBXGroup;
 			children = (
-				75CD3D5718960411005910CD /* Box2D.xcodeproj */,
+				7502D79C18A7E071002B3A1D /* Dependencies */,
 				7523F776187BA2FC0063096D /* FallingStuff2App */,
 				7523F7DD187BA38E0063096D /* FallingStuff2Saver */,
 				75F8D7AD187BA439001BD63A /* FallingStuff2Lib */,
@@ -279,17 +290,6 @@
 				7523F7E3187BA38E0063096D /* FallingStuff2Saver-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		75CD3D5818960411005910CD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				75CD3D5F18960411005910CD /* libBox2D.a */,
-				75CD3D6118960411005910CD /* libGLUI.a */,
-				75CD3D6318960411005910CD /* HelloWorld */,
-				75CD3D6518960411005910CD /* Testbed */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		75F8D7AD187BA439001BD63A /* FallingStuff2Lib */ = {
@@ -444,8 +444,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 75CD3D5818960411005910CD /* Products */;
-					ProjectRef = 75CD3D5718960411005910CD /* Box2D.xcodeproj */;
+					ProductGroup = 7502D79118A7E06B002B3A1D /* Products */;
+					ProjectRef = 7502D79018A7E06B002B3A1D /* Chipmunk6.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -459,32 +459,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		75CD3D5F18960411005910CD /* libBox2D.a */ = {
+		7502D79718A7E06C002B3A1D /* ChipmunkDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = ChipmunkDemo.app;
+			remoteRef = 7502D79618A7E06C002B3A1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7502D79918A7E06C002B3A1D /* libChipmunk.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libBox2D.a;
-			remoteRef = 75CD3D5E18960411005910CD /* PBXContainerItemProxy */;
+			path = libChipmunk.a;
+			remoteRef = 7502D79818A7E06C002B3A1D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		75CD3D6118960411005910CD /* libGLUI.a */ = {
+		7502D79B18A7E06C002B3A1D /* libChipmunk-iPhone.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libGLUI.a;
-			remoteRef = 75CD3D6018960411005910CD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		75CD3D6318960411005910CD /* HelloWorld */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = HelloWorld;
-			remoteRef = 75CD3D6218960411005910CD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		75CD3D6518960411005910CD /* Testbed */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = Testbed;
-			remoteRef = 75CD3D6418960411005910CD /* PBXContainerItemProxy */;
+			path = "libChipmunk-iPhone.a";
+			remoteRef = 7502D79A18A7E06C002B3A1D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -775,7 +768,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					Box2D/Box2D,
+					Dependencies/Chipmunk/include/chipmunk,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -787,7 +780,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					Box2D/Box2D,
+					Dependencies/Chipmunk/include/chipmunk,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
